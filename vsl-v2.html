@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Eric, I Built This for Sherwood Construction</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --bg: #0a0a1a;
+      --surface: #111128;
+      --border: rgba(255,255,255,0.08);
+      --white: #ffffff;
+      --muted: #8b8ba3;
+      --accent: #015670;
+      --accent-glow: rgba(1,86,112,0.25);
+      --green: #22c55e;
+    }
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      background: var(--bg);
+      color: var(--white);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      -webkit-font-smoothing: antialiased;
+    }
+    body::before {
+      content: '';
+      position: fixed;
+      inset: 0;
+      background-image:
+        linear-gradient(rgba(255,255,255,0.015) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,0.015) 1px, transparent 1px);
+      background-size: 60px 60px;
+      pointer-events: none;
+      z-index: 0;
+    }
+    body > * { position: relative; z-index: 1; }
+    .container { max-width: 800px; width: 100%; padding: 40px 20px; }
+    .badge {
+      display: inline-block;
+      background: rgba(1,86,112,0.15);
+      color: var(--accent);
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      padding: 6px 14px;
+      border-radius: 20px;
+      border: 1px solid rgba(1,86,112,0.3);
+      margin-bottom: 16px;
+    }
+    h1 {
+      font-size: clamp(1.6rem, 4vw, 2.2rem);
+      font-weight: 800;
+      line-height: 1.2;
+      margin-bottom: 12px;
+    }
+    .subtitle {
+      color: var(--muted);
+      font-size: 16px;
+      line-height: 1.6;
+      margin-bottom: 32px;
+    }
+    .video-wrapper {
+      position: relative;
+      width: 100%;
+      border-radius: 12px;
+      overflow: hidden;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      box-shadow: 0 20px 60px rgba(0,0,0,0.4);
+      margin-bottom: 32px;
+    }
+    video {
+      width: 100%;
+      display: block;
+    }
+    .cta-section {
+      text-align: center;
+      padding: 32px 0;
+    }
+    .cta-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      background: var(--accent);
+      color: var(--white);
+      padding: 18px 48px;
+      border-radius: 8px;
+      font-size: 17px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      text-decoration: none;
+      transition: all 0.25s;
+      box-shadow: 0 4px 20px var(--accent-glow);
+    }
+    .cta-btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 32px var(--accent-glow);
+    }
+    .cta-sub {
+      color: var(--muted);
+      font-size: 13px;
+      margin-top: 12px;
+    }
+    .version-tag {
+      color: var(--muted);
+      font-size: 11px;
+      text-align: center;
+      margin-top: 40px;
+      opacity: 0.5;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="badge">Built for Sherwood Construction</div>
+    <h1>Eric, I put together a new website for your business</h1>
+    <p class="subtitle">Take a quick look at what your online presence could look like. This was designed specifically for Eric Sherwood Construction in Napa Valley.</p>
+
+    <div class="video-wrapper">
+      <video controls preload="metadata" poster="">
+        <source src="eric-sherwood-vsl-v2-natural.mp4" type="video/mp4" />
+        Your browser does not support video playback.
+      </video>
+    </div>
+
+    <div class="cta-section">
+      <a href="https://calendly.com/onlineoptimisers/discovery" class="cta-btn">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+        Claim Your Website - Book a Call
+      </a>
+      <p class="cta-sub">Free 15-minute call. No strings attached.</p>
+    </div>
+
+    <p class="version-tag">v2 - Natural browsing scroll</p>
+  </div>
+</body>
+</html>
